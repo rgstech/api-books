@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Livro extends Model
+class Livro extends Model //modelo para livros
 {
     use HasFactory;
 

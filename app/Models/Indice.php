@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Indice extends Model
+class Indice extends Model //modelo para indices
 {
     use HasFactory;
 
