@@ -12,5 +12,6 @@ Route::prefix('v1')->group(function () {
         Route::get('livros', [LivroController::class, 'index']); // listar livros
         Route::post('livros', [LivroController::class, 'store']); //armazenar livro
         Route::post('livros/{livroId}/importar-indices-xml', [LivroController::class, 'importarIndicesXml']);
+        //importação por arquivo xml
     });
 });
