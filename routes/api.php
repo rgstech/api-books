@@ -12,6 +12,7 @@ Route::prefix('v1')->group(function () {
     Route::middleware('auth:sanctum')->group(function () { // rotas protegidas pelo middleware com sanctum
 
         Route::get('livros', [LivroController::class, 'index']); // listar livros
+        Route::get('livros/{id}', [LivroController::class, 'show']); // Exibir um livro com seus índices associados
         Route::post('livros', [LivroController::class, 'store']); //armazenar livro
         Route::post('livros/{livroId}/importar-indices-xml', [LivroController::class, 'importarIndicesXml']);
         //importação por arquivo xml
