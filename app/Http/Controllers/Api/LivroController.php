@@ -27,6 +27,20 @@ class LivroController extends Controller
         return response()->json($query->get());
     }
 
+    public function show($id)
+    {
+        // Consulta o livro junto com os índices
+        $livro = Livro::with('indices')->find($id);
+
+        // Verifica se o livro existe
+        if (!$livro) {
+            return response()->json(['error' => 'Livro não encontrado'], 404);
+        }
+
+        // Retorna o livro e seus índices em formato JSON
+        return response()->json($livro);
+    }
+
     public function store(Request $request)
     {
         $data = $request->validate([
